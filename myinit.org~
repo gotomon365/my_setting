@@ -1,10 +1,4 @@
 #+STARTUP: overview
-* backspace
-#+begin_src emacs-lisp
-(global-set-key [(control ?h)] 'delete-backward-char)
-#+end_src
-
-
 * interface tewaks
 #+begin_src emacs-lisp
 (setq inhibit-startup-message t)
@@ -30,10 +24,10 @@
 * the org-bullets
 #+begin_src emacs-lisp
 ;; org-mode stuff
-;;(use-package org-bullets
-;;  :ensure t
-;;  :config
-;;  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 
 (setq indo-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -73,9 +67,9 @@
   :ensure t
   :bind (("C-s" . swiper)
 	 ("C-r" . swiper)
-	 ("C-c C-r" . ivy-resume))
-;;	 ("M-x" . counsel-M-x)
-;;	 ("C-x C-f" . counsel-find-file))
+	 ("C-c C-r" . ivy-resume)
+	 ("M-x" . counsel-M-x)
+	 ("C-x C-f" . counsel-find-file))
   :config
   (progn
     (ivy-mode 1)
@@ -122,6 +116,9 @@
 * theme
 #+begin_src emacs-lisp
 
+  (use-package zeno-theme
+    :ensure t)
+;;  (load-theme 'leuven t)
 #+end_src
 
 p* Flycheck
@@ -157,7 +154,7 @@ p* Flycheck
 #+end_src
 * Misc packages
   #+begin_src emacs-lisp
-
+    (global-hl-line-mode t)
 
     (use-package beacon
       :ensure t
