@@ -1,0 +1,26 @@
+#+STARTUP: hidestars
+#+STARTUP: indents
+
+
+* 4.1 singly linked lists and chain
+  data + link
+
+  first -> bat -> cat -> eat -> ... -> wat 0
+
+* 4.2 represening chain in c
+** example 4.1 [List of words]:
+   we first defin a node structure for the list.
+   #+BEGIN_SRC c
+     typedef sturct listNode *listPointer;
+     typedef struct listNode {
+       char data[4];
+       listPointer link;
+     }node;
+
+   #+END_SRC
+
+
+  
+
+
+  

@@ -1,0 +1,10 @@
+#+STARTUP: hidestars
+
+* 4.1
+  #+BEGIN_SRC c
+    for (i = 0; i < N; ++i) {
+  
+     }
+
+
+  #+END_SRC
