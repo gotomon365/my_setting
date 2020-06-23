@@ -1,0 +1,54 @@
+#+STARTUP: hidestars
+
+* ch13_String
+** ex
+*** 1.Smallest word and largest word
+    #+BEGIN_SRC c
+      #include <stdio.h>
+      #include <string.h>
+
+      #define SIZE 21
+
+      void clean_str(char *s);
+      int main(int argc, char *argv[])
+      {
+	char smallest[SIZE] = "";
+	for (int i= 0; i < SIZE; ++i) {
+	  smallest[i] = 'z';
+	}
+
+	char largest[SIZE] = "";
+	char receive[SIZE] = "";
+	printf("Enter word: ");
+	while (  scanf("%s", receive) && strlen(receive) != 4) {
+	  if (strcmp(receive, smallest) < 1) {
+	    clean_str(smallest);
+	    for (int i = 0; i < strlen(receive); ++i) {
+	      smallest[i] = receive[i];
+	    }
+	  }
+	  if (strcmp(receive, largest) > 1) {
+	    clean_str(largest);
+	    for (int i = 0; i < strlen(receive); ++i) {
+	      largest[i] = receive[i];
+	    }
+	  }
+
+	  printf("Enter word: ");
+	}
+
+	printf("\n");
+	printf("Smallest word: %s\n", smallest);
+	printf("Largest word: %s\n", largest);
+	return 0;
+      }
+
+      void clean_str(char *s)
+      {
+	for (int i = 0; i < strlen(s); ++i) {
+	  s[i] = ' ';
+	}
+      }
+
+
+    #+END_SRC
