@@ -70,3 +70,76 @@
 	return 0;
       }
     #+END_SRC
+* ch17_Pointer
+** 17.2
+*** 17.2.2 malloc string function
+   #+BEGIN_SRC c
+     #include <stdio.h>
+     #include <stdlib.h>
+     #include <string.h>
+
+     char *concat(const char *s1, const char *s2);
+
+     int main(int argc, char *argv[])
+     {
+       char *s1 = "abc";
+       char *s2 = "def";
+       printf("%s\n", concat(s1, s2));
+  
+       return 0;
+     }
+
+     /* 
+      ,* Load two strings, compute their size
+      ,* malloc a space to concat two string
+      ,* free it when used
+      ,*/
+     char *concat(const char *s1, const char *s2)
+     {
+       char *result;
+       result = malloc(strlen(s1) + strlen(s2));
+
+       if (result == NULL) {
+	 printf("Error: malloc failed tin concat\n");
+	 exit(EXIT_FAILURE);
+       }
+       strcpy(result, s1);
+       strcat(result, s2);
+       return result;
+     }
+   #+END_SRC
+** 17.3
+*** 17.3.1 malloc dynamic allocation array
+    #+BEGIN_SRC c
+
+      int *a;
+      a = malloc(n * sizeof(int));
+
+    #+END_SRC
+
+*** 17.3.2 calloc dynamic allocation array
+    #+BEGIN_SRC c
+
+      a = calloc(n, sizeof(int));
+      struct point {int x, y;} *p;
+      p = calloc (1, sizeof(struct  point));
+
+    #+END_SRC
+
+*** 17.4 free it!
+    free some allocation things
+
+** 17.5 LINKER LIST
+*** 17.5.1 declare node type
+
+    #+BEGIN_SRC c
+
+      sruct node{
+	// data stored in the node
+	int value;
+	// pointer to the next node
+	struct node *next;
+      };
+
+    #+END_SRC
+*** 17.5.2 
