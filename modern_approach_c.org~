@@ -1,9 +1,0 @@
-#+STARTUP: hidestars
-
-* ch13_String
-** ex
-*** 1.Smallest word and largest word
-    #+BEGIN_SRC c
-
-
-    #+END_SRC
