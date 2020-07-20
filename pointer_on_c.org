@@ -99,3 +99,109 @@
 
 
   #+END_SRC
+* 3
+** 3.1
+   #+BEGIN_SRC c
+     #include <stdio.h>
+     #include <string.h>
+
+
+     int main(int argc, char *argv[])
+     {
+       // receive n
+       int n = 0;
+       printf("Enter a number: ");
+       scanf(" %d", &n);
+  
+       // do
+       double next = (n + (n / n)) / 2;
+       while( next != (next + (n / next)) / 2)
+	 {
+	   next = (next + (n / next)) / 2;
+	 }
+       // print result
+       printf("%lf\n", next);
+       return 0;
+     }
+
+
+
+   #+END_SRC
+** 3.2
+   #+BEGIN_SRC c
+     #include <stdio.h>
+
+     int prime[100] = {2, 3, 5};
+
+     int main(int argc, char *argv[])
+     {
+       int index = 3;
+       int is_prime = 1;
+       for (int i =7; i <= 100; ++i) {
+	 is_prime = 1;
+	 for (int j = 0; j < index; ++j) {
+	   if (i % prime[j] == 0) {
+	     is_prime = 0;
+	     break;
+	   }
+	 }
+	 if (is_prime) {
+	   prime[index++] = i;
+	 }
+       }
+
+       for (int i = 0 ; i < index; ++i) {
+	 printf("%d ", prime[i]);
+       }
+       printf("\n");
+
+       return 0;
+     }
+
+
+   #+END_SRC
+** 3.3
+   #+BEGIN_SRC c
+     #include <stdio.h>
+
+     #define and &&
+     #define or ||
+
+     void
+     swap(int *a, int *b);
+
+     int main(int argc, char *argv[])
+     {
+       int a, b, c;
+       scanf(" %d%d%d", &a, &b, &c);
+       swap(&a, &b);
+       swap(&b, &c);
+
+       if (c < a + b) {
+	 if (a == b and b == c) {
+	   printf("3\n");
+	 }
+	 else if (a == b or b == c or a == c) {
+	   printf("2\n");
+	 } 
+	   else {
+	     printf("just a tri\n");
+	   }
+   
+       }
+       else
+	 printf("It's wrong\n");
+  
+       return 0;
+     }
+
+     void
+     swap(int *a, int *b)
+     {
+       int temp;
+       temp = *a;
+       ,*a = *a * (*a <= *b) + *b * (*a > *b);
+       ,*b = temp * ( temp >= *b) + *b * (temp < *b);
+     }
+
+   #+END_SRC
