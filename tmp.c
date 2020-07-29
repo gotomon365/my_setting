@@ -24,7 +24,6 @@ int main(int argc, char *argv[])
 	int s1_value = 0, s2_value =0;
 	s1_value = rome_to_int(s1);
 	s2_value = rome_to_int(s2);
-	
 	int_to_rome(abs(s1_value -s2_value));
     }
     return 0;
@@ -108,51 +107,51 @@ void int_to_rome(int i)
 		i -= 1000;
 		printf("M");
 	    }
-	    if (i >= 900) {
+	    else if (i >= 900) {
 		i -= 900;
 		printf("CM");
 	    }
-	    if (i >= 500) {
+	    else if (i >= 500) {
 		i -= 500;
 		printf("D");
 	    }
-	    if (i >= 400) {
+	    else if (i >= 400) {
 		i -= 400;
 		printf("CD");
 	    }
-	    if (i >= 100) {
+	    else if (i >= 100) {
 		i -= 100;
 		printf("C");
 	    }
-	    if (i >= 90) {
+	    else if (i >= 90) {
 		i -= 90;
 		printf("XC");
 	    }
-	    if (i >= 50) {
+	    else if (i >= 50) {
 		i -= 90;
 		printf("L");
 	    }
-	    if (i >= 40) {
+	    else if (i >= 40) {
 		i -= 40;
 		printf("XL");
 	    }
-	    if (i >= 10) {
+	    else if (i >= 10) {
 		i -= 10;
 		printf("X");
 	    }
-	    if (i >= 9) {
+	    else if (i >= 9) {
 		i -=9;
 		printf("IX");
 	    }
-	    if (i >= 5) {
+	    else if (i >= 5) {
 		i -= 5;
 		printf("V");
 	    }
-	    if (i >= 4) {
+	    else if (i >= 4) {
 		i -= 4;
 		printf("IV");
 	    }
-	    if (i >= 1) {
+	    else if (i >= 1) {
 		i -= 1;
 		printf("I");
 	    }
