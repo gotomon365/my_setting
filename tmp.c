@@ -11,17 +11,21 @@ void int_to_rome(int i);
 int main(int argc, char *argv[])
 
 {
-    char c = ' ';
+
     char s1[SIZE] = "";
     char s2[SIZE] = "";
-    while (c != '#'){
-	scanf("%s %s", s1, s2);
+    
+    while ( scanf("%s", s1) != EOF){
+	if (s1[0] == '#') {
+	    break;
+	}
+	scanf("%s", s2);
+	
 	int s1_value = 0, s2_value =0;
 	s1_value = rome_to_int(s1);
 	s2_value = rome_to_int(s2);
 	
 	int_to_rome(abs(s1_value -s2_value));
-	c = getchar();
     }
     return 0;
 }
