@@ -3,7 +3,6 @@
 #+begin_src emacs-lisp
   (global-set-key [(control ?h)] 'delete-backward-char)
   (display-time-mode 1)
-
   ;; hide tool bar
   (tool-bar-mode 0)
   (menu-bar-mode 0)
@@ -118,13 +117,13 @@
 
 * auto-complete
 #+begin_src emacs-lisp
-(use-package auto-complete
-  :ensure t
-  :init
-  (progn
-    (ac-config-default)
-    (global-auto-complete-mode t)
-    ))
+;(use-package auto-complete
+;  :ensure t
+;  :init
+;  (progn
+;    (ac-config-default)
+;    (global-auto-complete-mode t)
+;    ))
 #+end_src
 * theme
 #+begin_src emacs-lisp
@@ -149,6 +148,7 @@ p* Flycheck
 
 * C
   #+begin_src emacs-lisp
+    (setq-default c-basic-offset 4)
     (use-package elpy
       :ensure t
       :config
@@ -181,8 +181,8 @@ p* Flycheck
       :config
       (global-set-key (kbd "C-=") 'er/expand-region))
 
-    (use-package iedit
-    
-    :ensure t)
+
   #+end_src
+
+
 
