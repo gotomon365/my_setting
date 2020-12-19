@@ -1,3 +1,4 @@
+
 #+STARTUP: overview
 * mysetting
 #+begin_src emacs-lisp
@@ -192,9 +193,10 @@ p* Flycheck
   #+BEGIN_SRC emacs-lisp
     ;; add to myinit.org
 
-    (setq inferior-lisp-program "/usr/bin/sbcl") ;sbcl的路徑
-    (add-to-list 'load-path"/usr/share/common-lisp/source/slime") ;slime的路徑
-    (require 'slime)
-    (slime-setup)
+;;    (setq inferior-lisp-program "/usr/bin/sbcl") ;sbcl的路徑
+;;    (add-to-list 'load-path"/usr/share/common-lisp/source/slime") ;slime的路徑
+;;    (require 'slime)
+;;    (slime-setup)
 
   #+END_SRC
+* IDO
