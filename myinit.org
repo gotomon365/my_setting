@@ -130,10 +130,13 @@
 #+end_src
 * theme
 #+begin_src emacs-lisp
-
+  (use-package zenburn-theme
+    :ensure t
+    :config (load-theme 'zenburn t))
 #+end_src
 
-p* Flycheck
+
+* Flycheck
 #+begin_src emacs-lisp
   (use-package flycheck
     :ensure t
@@ -199,4 +202,4 @@ p* Flycheck
 ;;    (slime-setup)
 
   #+END_SRC
-* IDO
+
