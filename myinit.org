@@ -1,5 +1,5 @@
-
 #+STARTUP: overview
+
 * mysetting
 #+begin_src emacs-lisp
   (global-set-key [(control ?h)] 'delete-backward-char)
@@ -11,9 +11,10 @@
   (global-hl-line-mode 0)
   ;; backupfile
   (setq backup-directory-alist '(("." . "~/.saves")))
+  ;; set pairs
+  (electric-pair-mode 1)
+  (electric-pair-delete-pair 1)
 #+end_src
-
-
 * interface tewaks
 #+begin_src emacs-lisp
 (setq inhibit-startup-message t)
@@ -39,10 +40,10 @@
 * the org-bullets
 #+begin_src emacs-lisp
 ;; org-mode stuff
-;;(use-package org-bullets
-;;  :ensure t
-;;  :config
-;;  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 
 (setq indo-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -62,7 +63,7 @@
     (global-set-key [remap other-window] 'ace-window)
     (custom-set-faces
      '(aw-leading-char-face
-       ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+       ((t (:inherit ace-jump-face-foreground :height 5.0)))))
     ))
 #+end_src
 * ivy
@@ -134,8 +135,6 @@
     :ensure t
     :config (load-theme 'zenburn t))
 #+end_src
-
-
 * Flycheck
 #+begin_src emacs-lisp
   (use-package flycheck
@@ -189,9 +188,6 @@
 
 
   #+end_src
-
-
-
 * slime
   #+BEGIN_SRC emacs-lisp
     ;; add to myinit.org
