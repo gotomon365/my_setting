@@ -1,19 +1,28 @@
 set t_Co=256
 colorscheme torte
 set cursorline
-"set cursorcolumn
 syntax enable
 set number
 set ruler
-set hlsearch
+set ignorecase
+set hlsearch 
 set cindent
 set expandtab
 set tabstop=4
 set softtabstop=4
-set backspace=2
-set laststatus=1
-set guifont=consolar:h20
+set encoding=utf-8
 
-"######################################
-inoremap vv <esc>
+imap jj <Esc>
+" vim-plug
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+call vundle#end()            " required
+filetype plugin indent on    " required
