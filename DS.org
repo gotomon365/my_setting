@@ -1,5 +1,0 @@
-#+startup: hidestars
-#+startup: overview
-
-
-
