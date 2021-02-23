@@ -17,22 +17,11 @@ set laststatus=2
 
 " remap keys
 imap jj <Esc>
-""inoremap ( ()<Esc>i
-""inoremap " ""<Esc>i
-""inoremap ' ''<Esc>i
-""inoremap [ []<Esc>i
-""inoremap { {}<Esc>i
+inoremap ( ()
+inoremap " "
+inoremap ' '
+inoremap [ []
+inoremap { {}
 
 
 " vim-plug
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'honza/vim-snippets'
-call vundle#end()            " required
-filetype plugin indent on    " required
