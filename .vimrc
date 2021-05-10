@@ -38,8 +38,12 @@ Plug 'honza/vim-snippets'
 
 """" For language
 """" golang """"
-Plug 'fatih/vim-go' ,{'tag':'*'}
 Plug 'dgryski/vim-godef'
+
+"""" YCM(Your Complete Me) auto Complete
+Plug 'Valloric/YouCompleteMe'
+"""" html
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 set t_Co=256
