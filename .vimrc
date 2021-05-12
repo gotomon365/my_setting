@@ -1,53 +1,41 @@
-set nocompatible            " be iMproved, required
-filetype off                " required
 " set the runtime path to include Vundle and initialize
+"
+set nocompatible " required
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" let Vundle manage Vundle, required
+" Let Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
-Plugin 'fatih/vim-go'
-" "All of your Plugins must be added before the following line
-call vundle#end()           "required
-filetype plugin indent on   "required
+" Install YCM Bundle
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'SirVer/ultisnips'
+Plugin 'elzr/vim-json'
+Plugin 'honza/vim-snippets'
+Plugin 'justinmk/vim-sneak'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'majutsushi/tagbar'
+Plugin 'mhinz/vim-signify'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
+Plugin 'tyru/open-browser.vim'
 
-" plug
-call plug#begin('~/.vim/plugged')
-" 可以快速對齊
-Plug 'junegunn/vim-easy-align'
-" 用來提供一個導航目錄的側邊欄
-Plug 'scrooloose/nerdtree'
-" 可以使nerdtree 的 tab 更友好
-Plug 'jistr/vim-nerdtree-tabs'
-" 自動補全括號
-Plug 'majutsushi/tagbar'
-" Vim 狀態列外掛
-Plug 'vim-airline/vim-airline'
-" 配色方案
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'crusoexia/vim-monokai'
-Plug 'acarapetis/vim-colors-github'
-Plug 'rakr/vim-one'
 
-" vim 使用 tab 補全
-Plug 'vim-scripts/SuperTab'
-" autocomplete
-Plug 'Shougo/neocomplete.vim'
-" vim code block
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Color schemes
+Plugin 'vim-scripts/a.vim'
 
-"""" For language
-"""" golang """"
-Plug 'dgryski/vim-godef'
+" Required, plugins available after.
+call vundle#end()
+filetype plugin indent on
 
-"""" YCM(Your Complete Me) auto Complete
-Plug 'Valloric/YouCompleteMe'
-"""" html
-Plug 'mattn/emmet-vim'
-call plug#end()
-
+set encoding=utf-8
 set t_Co=256
-colorscheme torte
 set cursorline
 syntax enable
 set number
@@ -61,9 +49,11 @@ set shiftwidth=4
 set softtabstop=4
 set encoding=utf-8
 set laststatus=2
-
+" Color
+colorscheme detorte
+let g:detorte_theme_mode = 'dark'
 " remap keys
 imap jj <Esc>
 
-" gopls
-let g:go_gopls_enalbed=0 
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python2_host_prog = '/usr/bin/python2'
