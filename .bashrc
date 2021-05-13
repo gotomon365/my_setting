@@ -82,7 +82,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
-    
 fi
 
 # colored GCC warnings and errors
@@ -92,8 +91,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias emacs='emacs -nw'
-alias myfile='cd ~/Documents/my_code/'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -118,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+alias emacs='emacs -nw'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/kuei/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -133,4 +134,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-alias scpit='scp pi@192.168.0.116:~/.output/video.h264 ~/.output'
+alias logout='gnome-session-quit'
+export GOPATH=/home/kuei/myGit/learn/go
+export PATH=$PATH:${GOPATH//://bin:}/bin
+export GOBIN=/home/kuei/myGit/learn/go/bin
