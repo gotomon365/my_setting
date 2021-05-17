@@ -50,7 +50,7 @@ set softtabstop=4
 set encoding=utf-8
 set laststatus=2
 " Color
-colorscheme detorte
+colorscheme twilight256 
 let g:detorte_theme_mode = 'dark'
 " remap keys
 imap jj <Esc>
