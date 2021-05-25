@@ -11,9 +11,8 @@
   (global-hl-line-mode 0)
   ;; backupfile
   (setq backup-directory-alist '(("." . "~/.saves")))
-  ;; set pairs
-  (electric-pair-mode 1)
-  (electric-pair-delete-pair 1)
+
+
 #+end_src
 * interface tewaks
 #+begin_src emacs-lisp
