@@ -13,7 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'elzr/vim-json'
 Plugin 'honza/vim-snippets'
-Plugin 'justinmk/vim-sneak'
+"  Plugin 'justinmk/vim-sneak'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'majutsushi/tagbar'
@@ -49,11 +49,10 @@ set shiftwidth=4
 set softtabstop=4
 set encoding=utf-8
 set laststatus=2
+set noeb
 " Color
-colorscheme twilight256 
+colorscheme gruvbox 
 let g:detorte_theme_mode = 'dark'
 " remap keys
 imap jj <Esc>
 
-let g:python3_host_prog = '/usr/bin/python3'
-let g:python2_host_prog = '/usr/bin/python2'
