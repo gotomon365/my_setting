@@ -2,6 +2,7 @@
 "
 set nocompatible " required
 filetype off
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Let Vundle manage itself
@@ -25,7 +26,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'tyru/open-browser.vim'
+Plugin 'junegunn/goyo.vim'
 
+" nerdtree
+Plugin 'preservim/nerdtree'
+
+" taglist
+Plugin 'vim-scripts/taglist.vim'
 
 " Color schemes
 Plugin 'vim-scripts/a.vim'
@@ -53,6 +60,13 @@ set noeb
 " Color
 colorscheme gruvbox 
 let g:detorte_theme_mode = 'dark'
+
+
+
 " remap keys
 imap jj <Esc>
-
+nmap <F7> : TrinityToggleAll
+"
+"
+set tags=tags
+set autochdir
